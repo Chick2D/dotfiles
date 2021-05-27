@@ -46,3 +46,4 @@ All of the software I use on a day-to-day basis.
 # Contributors
 
 Thanks [Stunner Waifu](https://gitlab.com/StunnerWaifu/) for helping me set up polybar and [bread](https://github.com/breadtard) for the better error in my zshrc.
+And [zerw](https://gitlab.com/zerw/) for his incredible neofetch configuration.
