@@ -44,4 +44,5 @@ All of the software I use on a day-to-day basis.
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Fish-like fast/unobtrusive autosuggestions for zsh. | 
 
 # Contributors
-A BIG Thanks to [Stunner Waifu](https://gitlab.com/StunnerWaifu/) for helping me set up polybar.
+
+Thanks [Stunner Waifu](https://gitlab.com/StunnerWaifu/) for helping me set up polybar and [bread](https://github.com/breadtard) for the better error in my zshrc.
