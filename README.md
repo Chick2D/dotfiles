@@ -33,10 +33,13 @@ All of the software I use on a day-to-day basis.
 | --- | --- | --- |
 | [EndeavourOS](https://endeavouros.com/) | An arch-based distrobution with a GUI Installer. |  |
 | [i3-gaps](https://github.com/Airblader/i3) | Just like i3, but with gaps. | [Here](https://github.com/Chick2D/dotfiles/blob/main/config) |
+| [polybar](https://github.com/polybar/polybar) | Bar | [Here](https://github.com/Chick2D/dotfiles/tree/main/.config/polybar)
+| [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) | Clean, elegant lock screen. | |
 | [neofetch](https://github.com/dylanaraps/neofetch) | Displays information about your computer | [Here](https://github.com/Chick2D/dotfiles/blob/main/config.conf) |
 | [afetch](https://github.com/13-CF/afetch) | A lighter fetch mainly used to add more flair to a new terminal instance | |
 | [alacritty](https://github.com/alacritty/alacritty) | A highly configurable GPU accelerated terminal. | [Here](https://github.com/Chick2D/dotfiles/blob/main/config.conf) |
 | [neovim](https://github.com/neovim/neovim) | Fork of Vim aiming to improve user experience, plugins, and GUIs | [Here](https://github.com/Chick2D/dotfiles/blob/main/.zshrc)
+| vim-plug | Plugin manager for vim and neovim. | |
 | [cava](https://github.com/karlstav/cava) | Audio visualizer. 
 | [zsh](https://github.com/zsh-users/zsh) | A better alternative to the bash and fish shells | [Here](https://github.com/Chick2D/dotfiles/blob/main/.zshrc) | 
 | [powerlevel10k](https://github.com/romkatv/powerlevel10k) | A fast, highly customizable zsh prompt theme. |
