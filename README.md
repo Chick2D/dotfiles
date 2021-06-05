@@ -39,7 +39,7 @@ All of the software I use on a day-to-day basis.
 | [afetch](https://github.com/13-CF/afetch) | A lighter fetch mainly used to add more flair to a new terminal instance | |
 | [alacritty](https://github.com/alacritty/alacritty) | A highly configurable GPU accelerated terminal. | [Here](https://github.com/Chick2D/dotfiles/blob/main/config.conf) |
 | [neovim](https://github.com/neovim/neovim) | Fork of Vim aiming to improve user experience, plugins, and GUIs | [Here](https://github.com/Chick2D/dotfiles/blob/main/.zshrc)
-| vim-plug | Plugin manager for vim and neovim. | |
+| [vim-plug](https://github.com/junegunn/vim-plug) | Plugin manager for vim and neovim. | |
 | [cava](https://github.com/karlstav/cava) | Audio visualizer. 
 | [zsh](https://github.com/zsh-users/zsh) | A better alternative to the bash and fish shells | [Here](https://github.com/Chick2D/dotfiles/blob/main/.zshrc) | 
 | [powerlevel10k](https://github.com/romkatv/powerlevel10k) | A fast, highly customizable zsh prompt theme. |
@@ -47,6 +47,7 @@ All of the software I use on a day-to-day basis.
 | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | Fish-like fast/unobtrusive autosuggestions for zsh. | 
 
 # Contributors
-
-Thanks [Stunner Waifu](https://gitlab.com/StunnerWaifu/) for helping me set up polybar and [bread](https://github.com/breadtard) for the better error in my zshrc.
-And [zerw](https://gitlab.com/zerw/) for his incredible neofetch configuration.
+Thanks to
+- [Stunner Waifu](https://gitlab.com/StunnerWaifu/) for helping me set up polybar 
+- [bread](https://github.com/breadtard) for the better error in my zshrc.
+- [zerw](https://gitlab.com/zerw/) for his incredible neofetch configuration.
