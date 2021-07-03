@@ -5,4 +5,4 @@ I have recently updated this from my older one which was very similar to zerw, b
 
 Update: added custom colroblocks
 
-![]https://cdn.discordapp.com/attachments/635625925748457482/860970200589795378/unknown.png
+![](https://cdn.discordapp.com/attachments/635625925748457482/860970200589795378/unknown.png)
