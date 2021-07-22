@@ -1,4 +1,4 @@
-# dotfiles
+<p align="center"><img src="https://media.discordapp.net/attachments/808758398786076722/867602165413052426/chick2ds-dotfiles.jpg" alt="Badge"></p>
 
 These are my dotfiles, pretty standard gruvbox rice If I say so myself, but looks decent nonetheless, feel free to take inspiration from them and use them in your own rice if you feel like it.
 
