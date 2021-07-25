@@ -1,0 +1,199 @@
+#---------------------------------------#
+#	 WM Indepentent Hotkeys		#
+#---------------------------------------#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# launch file manager
+super + shift + Return
+	nemo
+
+# launch browser
+super + shift + w
+	librewolf
+
+# emoticons thing
+super + e
+	$HOME/Scripts/Dmenu/Emoticons/emoticons.sh
+
+# rofi power menu
+super + shift + e
+	$HOME/.config/i3/scripts/rofi-power-menu
+
+# lock screen
+#
+#	betterlockscreen -l dimblur
+
+# take screenshot
+ctrl + shift + d
+	flameshot gui -p $HOME/Pictures
+#	maim -s | xclip -selection clipboard -t image/png
+
+# launch discord
+super + shift + m
+	discord-canary
+
+# launch calculator
+super + shift + c
+	galculator
+
+# launch password manager
+super + shift + p
+	spotify
+
+# program launcher
+super + d
+	$HOME/Scripts/Dmenu/Run/dmenu_run.sh
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd && bspc wm -r
+
+#---------------------------------------#
+#	     BSPWM Hotkeys		#
+#---------------------------------------#
+
+# volume
+
+XF86AudioMute
+	pulsemixer --mute
+
+XF86AudioMute
+	pulsemixer --unmute
+
+
+XF86AudioRaiseVolume
+	pulsemixer --change-volume 5 && pulsemixer --unmute
+#	amixer -D pulse sset Master 5%+ && pulsemixer --unmute
+XF86AudioLowerVolume
+	pulsemixer --change-volume -5
+#	amixer -D pulse sset Master 5%- && pulsemixer --unmute
+
+XF86AudioRaiseVolume + shift 
+	pulsemixer --change-volume 1	
+#	amixer -D pulse sset Master 1%+ && pulsemixer --unmute
+XF86AudioLowerVolume + shift
+	pulsemixer --change-volume -1
+#	amixer -D pulse sset Master 1%- && pulsemixer --unmute
+
+# brightness
+XF86MonBrightnessUp
+	brightnessctl set 25+
+XF86MonBrightnessDown + shift 
+	brightnessctl set 25-
+
+XF86MonBrightnessUp + shift
+	brightnessctl set 7+
+XF86MonBrightnessDown + shift
+	brightnessctl set 7-
+
+# display settings
+# not found out yet
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+ctrl + {_,shift + }q
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + p
+	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#---------------------------------------#
+#	     States/Flags		#
+#---------------------------------------#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# switching between floating and tiled
+super + space
+	bash -c "bspc node -t ~floating"
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#---------------------------------------#
+#	      Focus/Swap		#
+#---------------------------------------#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#---------------------------------------#
+#	       Preselect		#
+#---------------------------------------#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#---------------------------------------#
+#	       Move/Resize		#
+#---------------------------------------#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
