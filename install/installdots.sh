@@ -1,5 +1,7 @@
 #!/bin/bash
 
+question_dotfiles(){
+
 echo -e -n "\e[32m[?]\e[0m Would you like to install my dotfiles? (Yes/No)"
 read input1
 case $input1 in
@@ -32,6 +34,7 @@ exit
     echo "Unknown option, try again."
     ;;
 esac
+}
 
 installconfig(){
     mkdir ~/.oldconfig/
@@ -39,8 +42,11 @@ installconfig(){
     git clone https://github.com/chick2d/dotfiles chick-dotfiles
     cd ~/chick-dotfiles
     mv .config/ -t ~
-
-    nvim -c :PlugInstall -c
+	chmod +x ~/.config/bspwm/bspwmrc
+	chmod +x ~/.config/sxhkd/sxhkdrc
+	chmod +x ~/.config/polybar/launch.sh
+    
+	nvim -c :PlugInstall -c
 
     echo -e "\e[32m[?]\e[0m Finished "
 
@@ -189,14 +195,9 @@ fi
 #fi
 }
 
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+#git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/
+#sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+#       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-
-# keeping this for storage
-
-chmod +x ~/.config/bspwm/bspwmrc
-chmod +x ~/.config/sxhkd/sxhkdrc
-chmod +x ~/.config/polybar/launch.sh
+question_dotfiles
