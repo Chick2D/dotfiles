@@ -61,14 +61,17 @@ case $input1 in
 
 "Yes")
 packages
+question_aurhelper
 ;;
 
 "yes")
 packages
+question_aurhelper
 ;;
 
 "y")
 packages
+question_aurhelper
 ;;
 
 "No")
